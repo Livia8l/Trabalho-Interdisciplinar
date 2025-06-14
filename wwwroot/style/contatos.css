@@ -1,0 +1,40 @@
+main {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.main-content {
+    background-color: var(--cor-cinza-muito-claro);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 800px; 
+    align-items: left;
+}
+
+.main-content h1 {
+    color: var(--cor-cinza-escuro);
+    margin-bottom: 0;
+}
+
+.main-content  ul {
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    text-align: left;
+    margin-top: 0;
+}
+
+.main-content  ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: var(--cor-cinza-escuro);
+}
+
+nav ul li  {
+    margin-left: 15em;
+}
+
+.login-button {
+    margin-right: 3em;
+}

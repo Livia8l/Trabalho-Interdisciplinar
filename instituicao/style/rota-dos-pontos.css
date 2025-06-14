@@ -1,0 +1,311 @@
+/* Estilos específicos para cooperativa/rota-dos-pontos.html */
+
+.main-content-coleta {
+    display: flex;
+    height: calc(100vh - 70px); /* Altura total menos a altura do header */
+    background-color: var(--cor-verde-escuro);
+    padding: 0;
+}
+
+.sidebar-coleta {
+    background-color: var(--cor-cinza-muito-claro);
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Para empilhar os elementos verticalmente */
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--cor-cinza-escuro);
+    margin-bottom: 20px;
+}
+
+.user-profile i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: var(--cor-cinza-escuro);
+}
+
+.add-location-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--cor-cinza-escuro);
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--cor-cinza-claro);
+}
+
+.add-location-section i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: var(--cor-cinza-escuro);
+}
+
+.add-location-section .notification-icon {
+    font-size: 20px;
+    color: var(--cor-cinza-escuro);
+}
+
+.route-header {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--cor-cinza-escuro);
+    margin-top: 10px;
+}
+
+.route-header i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: var(--cor-cinza-escuro);
+}
+
+.timeline {
+    position: relative;
+    padding-left: 0; /* Ajustado */
+}
+
+.timeline::before { /* Pseudo-elemento para a linha vertical */
+    content: '';
+    position: absolute;
+    left: 19px; /* Ajuste para centralizar a linha com o marcador */
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: var(--cor-cinza-claro);
+    z-index: 0;
+}
+
+.timeline-item {
+    position: relative; /* Necessário para posicionar o marcador absolutamente */
+    margin-bottom: 20px;
+    display: flex; /* Para alinhar marcador e conteúdo */
+    align-items: center; /* Centralizar verticalmente */
+    padding-left: 40px; /* Espaço para a linha e o marcador */
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 10px; /* Ajuste para centralizar o marcador (20px de largura) na linha (20px de left) */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta para o centro exato */
+    font-size: 20px; /* Tamanho do ícone */
+    color: var(--cor-cinza-escuro); /* Cor padrão para os ícones */
+    z-index: 1; /* Garante que o marcador fique acima da linha */
+}
+
+.timeline-marker.filled {
+    color: var(--cor-cinza-escuro); /* Cor preenchida (preto) */
+}
+
+.timeline-marker.empty {
+    color: var(--cor-cinza-escuro); /* Cor da borda do vazio (preto) */
+}
+
+.timeline-content {
+    font-size: 16px;
+    color: var(--cor-cinza-escuro);
+    margin-left: 10px; /* Espaço entre o marcador e o texto */
+}
+
+.timeline-content p {
+    margin: 0; /* Remove margens padrão de parágrafo */
+    line-height: 1.2; /* Ajusta a altura da linha */
+}
+
+.item-time {
+    display: none; /* Esconde os horários por padrão */
+    margin-left: 5px; /* Espaçamento entre o número e o horário */
+    font-size: 14px; /* Tamanho da fonte para o horário */
+    color: var(--cor-cinza-escuro); /* Cor do horário */
+}
+
+.main-time-display {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o ícone e o texto */
+    margin-left: 2px; /* Ajuste horizontal para alinhar o texto com outros títulos */
+}
+
+.remaining-time-section {
+    margin-top: auto; /* Empurra para o final da sidebar */
+    display: flex;
+    flex-direction: column; /* Para empilhar os elementos verticalmente */
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--cor-cinza-escuro);
+    padding-left: 0; /* Ajustar conforme necessário */
+    border-top: 1px solid var(--cor-cinza-claro); /* Linha divisória */
+    padding-top: 20px;
+}
+
+.remaining-time-section i {
+    font-size: 18px; /* Ajustado para corresponder ao tamanho da fonte do texto */
+    margin-right: 10px;
+    color: var(--cor-cinza-escuro);
+    vertical-align: middle; /* Garante que o ícone seja alinhado verticalmente ao centro */
+}
+
+.details-section {
+    font-size: 14px; /* Tamanho da fonte menor para o subitem */
+    font-weight: normal; /* Removido negrito */
+    padding-left: 30px; /* Indentação para o subitem */
+    margin-top: 5px; /* Espaçamento abaixo do Restam 6:30, ajustado para mais perto */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.details-section i {
+    font-size: 16px; /* Tamanho do ícone ajustado */
+    margin-right: 8px; /* Espaçamento entre o ícone e o texto */
+    color: var(--cor-cinza-escuro);
+}
+
+.delete-route-section,
+.history-section {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--cor-cinza-escuro);
+    margin-top: 15px; /* Espaçamento entre as seções */
+    cursor: pointer;
+}
+
+.delete-route-section i,
+.history-section i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: var(--cor-cinza-escuro);
+}
+
+/* Removendo classes e estilos não utilizados */
+.dropdown-section {
+    padding-bottom: 10px; /* Manter se houver necessidade para outros elementos */
+    /* Removido border-bottom */
+}
+
+.footer-buttons {
+    background-color: var(--cor-verde-escuro);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+/* Outras classes de modal não relacionadas a sidebar */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none;
+}
+
+.modal-content-coleta {
+    background-color: var(--cor-verde-azulado-claro);
+    padding: 30px 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Aumentado o espaço entre o texto e os botões */
+}
+
+.modal-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--cor-verde-escuro);
+    text-align: center; /* Centralizar o texto */
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 30px; /* Espaçamento entre os botões */
+}
+
+.modal-action-button {
+    background-color: white; /* Fundo branco para os círculos */
+    border: none;
+    border-radius: 50%; /* Transforma em círculo */
+    width: 60px; /* Tamanho do botão */
+    height: 60px; /* Tamanho do botão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    transition: transform 0.2s;
+}
+
+.modal-action-button:hover {
+    transform: scale(1.05);
+}
+
+.modal-action-button i {
+    font-size: 30px; /* Tamanho dos ícones */
+    color: black; /* Cor dos ícones */
+}
+
+.map-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--cor-verde-medio);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.clear-button, .back-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.clear-button i {
+    font-size: 20px;
+    color: white;
+}
+
+.back-button {
+    background-color: var(--cor-verde-medio);
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}

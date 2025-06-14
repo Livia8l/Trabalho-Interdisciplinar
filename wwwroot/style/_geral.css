@@ -1,0 +1,161 @@
+:root {
+    --cor-cinza-escuro: #4B4B4B;
+    --cor-verde-escuro: #245146;
+    --cor-verde-medio: #70A678;
+    --cor-verde-oliva: #8395C0;
+    --cor-cinza-claro: #ADADAD;
+    --cor-verde-azulado-claro: #CDEAE3;
+    --cor-cinza-muito-claro: #D9DDD9;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-cinza-muito-claro);
+}
+
+header {
+    background-color: var(--cor-verde-escuro);
+    padding: 10px 0;
+    color: white;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header .login-button {
+    background-color: var(--cor-verde-medio);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+main {
+    background-color: var(--cor-verde-azulado-claro);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+}
+
+.main-content {
+    padding: 50px 35px;
+}
+
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #F00; /* Vermelho para erro */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.toast-notification.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* PERSONALIZAÇÕES FIXAS POR TAG */
+h1 {
+    color: var(--cor-verde-escuro);
+    font-size: 32px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+
+/* CLASSES REAPROVEITÁVEIS */
+.required-alert{
+    color: #F00;
+}
+
+.width-pattern {
+    width: 99%;
+}
+
+.width-full {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.right {
+    justify-content: right;
+}
+
+.mx-auto {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.mb-5{
+    margin-bottom: 5px;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.link-default {
+    color: var(--cor-cinza-escuro);
+    text-decoration: none;
+}

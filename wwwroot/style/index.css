@@ -1,0 +1,37 @@
+.main-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    overflow-y: auto;
+}
+
+.text-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.text-content ul li {
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.image-content {
+    flex: 0 0 400px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav ul li  {
+    margin-left: 15em;
+}
+
+.login-button {
+    margin-right: 3em;
+}
+

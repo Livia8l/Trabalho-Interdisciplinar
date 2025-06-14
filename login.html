@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortes</title>
+    <link rel="stylesheet" href="wwwroot/style/_geral.css">
+    <link rel="stylesheet" href="wwwroot/style/auth.css">
+</head>
+
+<body>
+    <!-- INICIO HEADER -->
+    <header>
+        <div class="width-pattern row mx-auto space-between">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Fortes</a></li>
+                    <li><a href="pontos-de-coleta.html">Pontos de Coleta</a></li>
+                    <li><a href="contatos.html">Contatos</a></li>
+                </ul>
+            </nav>
+            <a class="login-button" href="login.html">Entrar</a>
+        </div>
+    </header>
+    <!-- FIM HEADER -->
+
+    <main class="width-pattern mx-auto">
+        <section class="main-content col mx-auto">
+            <h1 class="text-center">LOGIN</h1>
+            <form class="col" action="">
+                <div class="col access-type-group">
+                    <h2>Tipo de acesso<span class="required-alert">*</span></h3>
+                        <div class="mb-5">
+                            <input id="cooperativa-radio" type="radio" name="tipo_acesso">
+                            <label for="cooperativa-radio" class="radio-label">Cooperativa</label>
+                        </div>
+                        <div>
+                            <input id="instituicao-radio" type="radio" name="tipo_acesso">
+                            <label for="instituicao-radio" class="radio-label">Instituição Social</label>
+                        </div>
+                </div>
+                <div class="col input-field-group">
+                    <label class="h2-label">Email<span class="required-alert">*</span></label>
+                    <input type="text" id="email-input">
+                </div>
+                <div class="col input-field-group">
+                    <label class="h2-label">Senha<span class="required-alert">*</span></label>
+                    <input type="password" id="password-input">
+                </div>
+                <button class="login-button-form" type="submit">Entrar</button>
+                <a class="forgot-password" href="forgot-password.html">Esqueci minha senha</a>
+            </form>
+        </section>
+    </main>
+
+    <div id="toast-notification" class="toast-notification"></div>
+
+    <script src="wwwroot/js/toast.js"></script>
+    <script src="wwwroot/js/auth.js"></script>
+    <script>
+
+        const tipoUsuario = localStorage.getItem('tipo_usuario');
+        if (tipoUsuario === 'cooperativa') {
+            window.location.href = 'cooperativa/index.html';
+        } else if (tipoUsuario === 'instituicao') {
+            window.location.href = 'instituicao/index.html';
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const logout = urlParams.get('logout');
+        
+        if (logout === '1') {
+            showToast('Até a próxima...');
+        }
+
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const cooperativaRadio = document.getElementById('cooperativa-radio');
+            const instituicaoRadio = document.getElementById('instituicao-radio');
+            const emailInput = document.getElementById('email-input');
+            const passwordInput = document.getElementById('password-input');
+
+            const email = emailInput.value;
+            const password = passwordInput.value;
+
+            autenticar(email, password, cooperativaRadio.checked, instituicaoRadio.checked);
+        });
+    </script>
+</body>
+
+</html>

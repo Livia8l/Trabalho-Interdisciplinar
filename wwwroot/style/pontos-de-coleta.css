@@ -1,0 +1,52 @@
+main {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.main-content {
+    background-color: var(--cor-cinza-muito-claro);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 800px; 
+    align-items: center;
+}
+
+.main-content h1 {
+    color: var(--cor-cinza-escuro);
+}
+
+.cep-search-input {
+    width: 50%;
+    padding: 10px 15px;
+    border: 1px solid var(--cor-cinza-claro);
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    color: var(--cor-cinza-escuro);
+}
+
+.cep-search-input::placeholder {
+    color: var(--cor-cinza-claro);
+}
+
+.cep-list {
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    text-align: center;
+}
+
+.cep-list li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: var(--cor-cinza-escuro);
+}
+
+nav ul li  {
+    margin-left: 15em;
+}
+
+.login-button {
+    margin-right: 3em;
+}

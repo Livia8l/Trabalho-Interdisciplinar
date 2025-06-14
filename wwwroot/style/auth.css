@@ -1,0 +1,91 @@
+main {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.main-content {
+    background-color: var(--cor-cinza-muito-claro);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 800px; 
+    align-items: left;
+}
+
+.main-content h1 {
+    color: var(--cor-cinza-escuro);
+    margin-bottom: 0;
+    padding: 10px 100px ;
+}
+
+.main-content h2 {
+    color: var(--cor-cinza-escuro);
+    margin-bottom: 8px;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+form{
+    padding: 0 150px;
+}
+
+.access-type-group {
+    margin-bottom: 25px;
+}
+
+.input-field-group {
+    margin-bottom: 25px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid var(--cor-cinza-claro);
+    border-radius: 8px;
+    font-size: 16px;
+    color: var(--cor-cinza-escuro);
+}
+
+
+.h2-label{
+    color: var(--cor-cinza-escuro);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.radio-label{
+    font-size: 18px;
+}
+
+.login-button-form {
+    background-color: var(--cor-verde-medio);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px; 
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    width: 40%;
+    align-self: center;
+}
+
+.forgot-password {
+    color: var(--cor-cinza-escuro); 
+    text-decoration: underline;
+    font-size: 0.9em;
+    margin-top: 0;
+    text-align: center;
+    align-self: center;
+}
+
+nav ul li  {
+    margin-left: 15em;
+}
+
+.login-button {
+    margin-right: 3em;
+}

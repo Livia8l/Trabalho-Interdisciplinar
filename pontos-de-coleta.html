@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortes</title>
+    <link rel="stylesheet" href="wwwroot/style/_geral.css">
+    <link rel="stylesheet" href="wwwroot/style/pontos-de-coleta.css">
+</head>
+
+<body>
+    <!-- INICIO HEADER -->
+    <header>
+        <div class="width-pattern row mx-auto space-between">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Fortes</a></li>
+                    <li><a href="pontos-de-coleta.html">Pontos de Coleta</a></li>
+                    <li><a href="contatos.html">Contatos</a></li>
+                </ul>
+            </nav>
+            <a class="login-button" href="login.html">Entrar</a>
+        </div>
+    </header>
+    <!-- FIM HEADER -->
+
+    <main class="width-pattern mx-auto">
+        <section class="main-content col mx-auto">
+            <h1>Pontos de Coleta</h1>
+            <input type="text" placeholder="Digite o CEP para buscar" class="cep-search-input">
+            <ul class="cep-list">
+                <li>584635 - CEP 29452678</li>
+                <li>257469 - CEP 26574321</li>
+                <li>654789 - CEP 87459632</li>
+                <li>321456 - CEP 85214789</li>
+                <li>897456 - CEP 23698521</li>
+                <li>258741 - CEP 32145876</li>
+                <li>963147 - CEP 84751230</li>
+                <li>852456 - CEP 23574159</li>
+                <li>321582 - CEP 23659545</li>
+            </ul>
+            <div class="row right width-full">
+                <a href="index.html" class="text-right link-default">Voltar</a>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const input = document.querySelector('.cep-search-input');
+        const lista = document.querySelector('.cep-list');
+        const itens = lista.getElementsByTagName('li');
+
+        input.addEventListener('input', function () {
+            const valorBusca = this.value.trim();
+
+            for (let item of itens) {
+                const match = item.textContent.match(/CEP\s*(\d+)/i);
+                const cep = match ? match[1] : '';
+
+                if (valorBusca === '' || cep.startsWith(valorBusca)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            }
+        });
+    });
+</script>
+
+</html>
